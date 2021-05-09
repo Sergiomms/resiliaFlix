@@ -1,0 +1,72 @@
+body{
+    background-color:aliceblue;
+    font-family: sans-serif;
+}
+
+.quadrado1{
+
+    box-shadow: 1px 1px 5px "color"= darkgray;
+    background-color: lavender;
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    margin:auto;
+}
+
+.login{
+
+    width: 400px;
+    display: flex;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.card > label{
+    width: 100px;
+    color:lightcoral;
+    display: block;
+}
+
+.card > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 20%;
+    height: 25px;
+    padding: 5px;
+}
+
+.card1 > label{
+margin-bottom: 10px;
+width: 100px;
+color:lightcoral;
+display: block;
+}
+
+.card1 > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 20%;
+    height: 25px;
+    padding: 5px;
+}
+
+.cardBotao > button{
+    background-image:linear-gradient(to right, red, #300308);
+    width: 20%;
+    border-radius: 30px;
+    padding: 15px;
+    color:lightcyan;
+    border:0px;
+}
+
+.btn button:hover{
+    background-image:linear-gradient(to right, #5a0c14, red);
+}
+
+.cardEsqueciSenha{
+    width: 100%;
+    padding: 10px;
+    color:black;
+    outl
+}
