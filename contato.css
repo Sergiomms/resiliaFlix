@@ -1,0 +1,15 @@
+#conteudo h3{
+    display: block;
+}
+
+
+#conteudo{
+    display: inline-block;
+    width: 100%;
+
+}
+
+.card{
+    border: 1px solid blue;
+    margin: 4px;
+}
