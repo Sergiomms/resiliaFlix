@@ -12,10 +12,12 @@ function pesquisar( input ){
     $.ajax({
         'url' : 'https://www.omdbapi.com/',
         'data' :{
-            'apikey' : 'ae5c9bff',
-            's' : input,
+            'apikey': 'ae5c9bff',
+            's'     : input,
+            'type'  : 'movie',
         },
         'success' : function(result){
+            document.querySelector('#resultado').innerHTML = ''
             try{
                 console.log(insereFilmes(result))
             } catch(e){
@@ -29,7 +31,6 @@ function pesquisar( input ){
 }
 
 function insereFilmes(obj){
-
     if(obj.Response === "True"){
         criaElemento(obj.Search)
         return
@@ -44,7 +45,9 @@ function criaElemento( arr ){
     arr.forEach(element => {
         const div = `
             <div class="filme">
-                <img class="capa" src="${element.Poster}">
+                <div class="div-poster">
+                    <img class="capa" src="${element.Poster}">
+                </div>
                 <p class="mx-3">${element.Title}</p>
             </div>
         `
