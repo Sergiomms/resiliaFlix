@@ -6,19 +6,19 @@ $(document).ready(() => {
     });
   }
 
-  let nome = $("#nome");
-  let email = $("#email");
-  let senha = $("#senha");
-  let confirmacaoSenha = $("#confirmacaoSenha");
-  let rg = $("#rg");
-  let cep = $("#cep");
-  let estado = $("#estado");
-  let cidade = $("#cidade");
-  let bairro = $("#bairro");
-  let rua = $("#rua");
-  let numero = $("#numero");
-  let complemento = $("#complemento");
-  let btnEnviar = $("#enviar");
+  const nome = $("#nome");
+  const email = $("#email");
+  const senha = $("#senha");
+  const confirmacaoSenha = $("#confirmacaoSenha");
+  const rg = $("#rg");
+  const cep = $("#cep");
+  const estado = $("#estado");
+  const cidade = $("#cidade");
+  const bairro = $("#bairro");
+  const rua = $("#rua");
+  const numero = $("#numero");
+  const complemento = $("#complemento");
+  const btnEnviar = $("#enviar");
 
   //Limpa o valor do input passado como parâmetro;
   limpaValorDoInput(nome);
@@ -33,7 +33,22 @@ $(document).ready(() => {
     cidade.val("");
     estado.val("");
     complemento.val("");
+    numero.val("");
   }
+
+  //Valida o campo de rg
+  rg.blur(() => {
+    if (typeof rg !== "string") {
+      let validaRg = /^[0-9]{7}$/;
+
+      if (rg.val().length === validaRg) {
+        console.log(`O rg informado foi ${rg.val()}`);
+      } else {
+        console.log("rg incorreto");
+        rg.val(" ");
+      }
+    }
+  });
 
   //Quando o campo cep perde o foco.
   cep.blur(function () {
@@ -41,12 +56,12 @@ $(document).ready(() => {
     cep = $(this).val().replace(/\D/g, "");
 
     //Verifica se campo cep possui valor informado.
-    if (cep != "") {
+    if (cep !== "") {
       //Expressão regular para validar o CEP.
-      var validacep = /^[0-9]{8}$/;
+      let validaCep = /^[0-9]{8}$/;
 
       //Valida o formato do CEP.
-      if (validacep.test(cep)) {
+      if (validaCep.test(cep)) {
         //Preenche os campos com "..." enquanto consulta webservice.
         rua.val("...");
         bairro.val("...");
