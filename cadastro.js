@@ -6,19 +6,19 @@ $(document).ready(() => {
     });
   }
 
-  const nome = $("#nome");
-  const email = $("#email");
-  const senha = $("#senha");
-  const confirmacaoSenha = $("#confirmacaoSenha");
-  const rg = $("#rg");
-  const cep = $("#cep");
-  const estado = $("#estado");
-  const cidade = $("#cidade");
-  const bairro = $("#bairro");
-  const rua = $("#rua");
-  const numero = $("#numero");
-  const complemento = $("#complemento");
-  const btnEnviar = $("#enviar");
+  let nome = $("#nome");
+  let email = $("#email");
+  let senha = $("#senha");
+  let confirmacaoSenha = $("#confirmacaoSenha");
+  let rg = $("#rg");
+  let cep = $("#cep");
+  let estado = $("#estado");
+  let cidade = $("#cidade");
+  let bairro = $("#bairro");
+  let rua = $("#rua");
+  let numero = $("#numero");
+  let complemento = $("#complemento");
+  let btnEnviar = $("#enviar");
 
   //Limpa o valor do input passado como parâmetro;
   limpaValorDoInput(nome);
@@ -37,6 +37,7 @@ $(document).ready(() => {
   }
 
   //Valida o campo de rg
+
   rg.blur(() => {
     if (typeof rg !== "string") {
       let validaRg = /^[0-9]{7}$/;
@@ -68,7 +69,7 @@ $(document).ready(() => {
         cidade.val("...");
         estado.val("...");
         complemento.val("...");
-
+        numero.val("...");
         //Consulta o webservice viacep.com.br/
         $.getJSON(
           "https://viacep.com.br/ws/" + cep + "/json/?callback=?",
