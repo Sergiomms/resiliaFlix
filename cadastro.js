@@ -2,8 +2,18 @@ $(document).ready(() => {
   //Serve para limpar o valor do input quando clicado
   function limpaValorDoInput(entrada) {
     entrada.on("click", () => {
-      entrada.val(" ");
+      entrada.val("");
     });
+  }
+
+  function limpa_formulário_cep() {
+    // Limpa valores do formulário de cep.
+    rua.val("");
+    bairro.val("");
+    cidade.val("");
+    estado.val("");
+    complemento.val("");
+    numero.val("");
   }
 
   let nome = $("#nome");
@@ -26,27 +36,19 @@ $(document).ready(() => {
   limpaValorDoInput(cep);
   limpaValorDoInput(rg);
 
-  function limpa_formulário_cep() {
-    // Limpa valores do formulário de cep.
-    rua.val("");
-    bairro.val("");
-    cidade.val("");
-    estado.val("");
-    complemento.val("");
-    numero.val("");
-  }
+  limpa_formulário_cep();
 
   //Valida o campo de rg
-
   rg.blur(() => {
     if (typeof rg !== "string") {
-      let validaRg = /^[0-9]{7}$/;
+      let validaRg = 7;
 
-      if (rg.val().length === validaRg) {
+      if (rg.val().length >= validaRg) {
         console.log(`O rg informado foi ${rg.val()}`);
+        rg.val();
       } else {
         console.log("rg incorreto");
-        rg.val(" ");
+        rg.val("");
       }
     }
   });
@@ -81,6 +83,7 @@ $(document).ready(() => {
               cidade.val(dados.localidade);
               estado.val(dados.uf);
               complemento.val(dados.complemento);
+              numero.val("").focus();
             } //end if.
             else {
               //CEP pesquisado não foi encontrado.
