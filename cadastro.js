@@ -6,6 +6,18 @@ $(document).ready(() => {
     });
   }
 
+  function validateEmail(email) {
+    let re = /\S+@\S+\.\S+/;
+    if (re.test(email.val())) {
+      console.log(`email é: ${email.val()}`);
+      senha.val("").focus();
+      return email.val();
+    } else {
+      console.log("email invalido");
+      email.val("").focus();
+    }
+  }
+
   function limpa_formulário_cep() {
     // Limpa valores do formulário de cep.
     rua.val("");
@@ -35,8 +47,71 @@ $(document).ready(() => {
   limpaValorDoInput(email);
   limpaValorDoInput(cep);
   limpaValorDoInput(rg);
-
   limpa_formulário_cep();
+
+  email.blur(() => {
+    validateEmail(email);
+  });
+
+  senha.blur(() => {
+    let letrasMaiusculas = /[A-Z]/;
+    let letrasMinusculas = /[a-z]/;
+    let numeros = /[0-9]/;
+    let caracteresEspeciais = /[!|@|#|$|%|^|&|*|(|)|-|_]/;
+    let valorSenha = senha.val();
+    if (valorSenha.length >= 6) {
+      let contagemMaiusculas = 0;
+      let contagemMinusculas = 0;
+      let contagemNumeros = 0;
+      let contagemCaracteresEspecias = 0;
+      for (let i = 0; i < valorSenha.length; i++) {
+        console.log(i);
+        if (letrasMaiusculas.test(valorSenha[i]) && contagemMaiusculas === 0) {
+          contagemMaiusculas++;
+          console.log(contagemMaiusculas);
+        } else if (
+          letrasMinusculas.test(valorSenha[i]) &&
+          contagemMinusculas === 0
+        ) {
+          contagemMinusculas++;
+          console.log(contagemMinusculas);
+        } else if (numeros.test(valorSenha[i]) && contagemNumeros === 0) {
+          contagemNumeros++;
+          console.log(contagemNumeros);
+        } else if (
+          caracteresEspeciais.test(valorSenha[i]) &&
+          contagemCaracteresEspecias === 0
+        ) {
+          contagemCaracteresEspecias++;
+          console.log(contagemCaracteresEspecias);
+        }
+      }
+      if (
+        contagemMaiusculas === 1 &&
+        contagemMinusculas === 1 &&
+        contagemNumeros === 1 &&
+        contagemCaracteresEspecias === 1
+      ) {
+        console.log("senha está correta");
+        confirmacaoSenha.val("").focus();
+      }
+    } else {
+      alert(
+        "senha deve conter:\n1 letra maiúscula\n1 letra minúscula\n1 caracter especial\nNúmeros",
+      );
+      senha.val("");
+    }
+  });
+
+  confirmacaoSenha.blur(() => {
+    if (confirmacaoSenha.val() === senha.val()) {
+      console.log("senha confirmada");
+      rg.val("").focus();
+    } else {
+      console.log("senha inválida");
+      confirmacaoSenha.val("").focus();
+    }
+  });
 
   //Valida o campo de rg
   rg.blur(() => {
@@ -45,7 +120,7 @@ $(document).ready(() => {
 
       if (rg.val().length >= validaRg) {
         console.log(`O rg informado foi ${rg.val()}`);
-        rg.val();
+        cep.val("").focus();
       } else {
         console.log("rg incorreto");
         rg.val("");
@@ -54,7 +129,7 @@ $(document).ready(() => {
   });
 
   //Quando o campo cep perde o foco.
-  cep.blur(function () {
+  cep.blur(() => {
     //Nova variável "cep" somente com dígitos.
     cep = $(this).val().replace(/\D/g, "");
 
