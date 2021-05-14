@@ -41,13 +41,13 @@ $(document).ready(() => {
   let numero = $("#numero");
   let complemento = $("#complemento");
   let btnEnviar = $("#enviar");
+  let formulario = $("form");
 
   //Limpa o valor do input passado como parâmetro;
   limpaValorDoInput(nome);
   limpaValorDoInput(email);
   limpaValorDoInput(cep);
   limpaValorDoInput(rg);
-  limpa_formulário_cep();
 
   email.blur(() => {
     validateEmail(email);
@@ -131,15 +131,15 @@ $(document).ready(() => {
   //Quando o campo cep perde o foco.
   cep.blur(() => {
     //Nova variável "cep" somente com dígitos.
-    cep = $(this).val().replace(/\D/g, "");
+    let valorCep = cep.val().replace(/\D/g, "");
 
     //Verifica se campo cep possui valor informado.
-    if (cep !== "") {
+    if (valorCep !== "") {
       //Expressão regular para validar o CEP.
       let validaCep = /^[0-9]{8}$/;
 
       //Valida o formato do CEP.
-      if (validaCep.test(cep)) {
+      if (validaCep.test(valorCep)) {
         //Preenche os campos com "..." enquanto consulta webservice.
         rua.val("...");
         bairro.val("...");
@@ -149,7 +149,7 @@ $(document).ready(() => {
         numero.val("...");
         //Consulta o webservice viacep.com.br/
         $.getJSON(
-          "https://viacep.com.br/ws/" + cep + "/json/?callback=?",
+          "https://viacep.com.br/ws/" + valorCep + "/json/?callback=?",
           function (dados) {
             if (!("erro" in dados)) {
               //Atualiza os campos com os valores da consulta.
@@ -178,5 +178,10 @@ $(document).ready(() => {
       //cep sem valor, limpa formulário.
       limpa_formulário_cep();
     }
+  });
+  btnEnviar.click((event) => {
+    event.preventDefault();
+    if (formulario) console.log("campos estão válidos");
+    else console.log("campos inválidos");
   });
 });
