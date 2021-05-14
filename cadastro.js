@@ -9,11 +9,9 @@ $(document).ready(() => {
   function validateEmail(email) {
     let re = /\S+@\S+\.\S+/;
     if (re.test(email.val())) {
-      console.log(`email é: ${email.val()}`);
       senha.val("").focus();
       return email.val();
     } else {
-      console.log("email invalido");
       email.val("").focus();
     }
   }
@@ -65,7 +63,6 @@ $(document).ready(() => {
       let contagemNumeros = 0;
       let contagemCaracteresEspecias = 0;
       for (let i = 0; i < valorSenha.length; i++) {
-        console.log(i);
         if (letrasMaiusculas.test(valorSenha[i]) && contagemMaiusculas === 0) {
           contagemMaiusculas++;
           console.log(contagemMaiusculas);
@@ -92,7 +89,6 @@ $(document).ready(() => {
         contagemNumeros === 1 &&
         contagemCaracteresEspecias === 1
       ) {
-        console.log("senha está correta");
         confirmacaoSenha.val("").focus();
       }
     } else {
@@ -105,10 +101,8 @@ $(document).ready(() => {
 
   confirmacaoSenha.blur(() => {
     if (confirmacaoSenha.val() === senha.val()) {
-      console.log("senha confirmada");
       rg.val("").focus();
     } else {
-      console.log("senha inválida");
       confirmacaoSenha.val("").focus();
     }
   });
@@ -119,10 +113,8 @@ $(document).ready(() => {
       let validaRg = 7;
 
       if (rg.val().length >= validaRg) {
-        console.log(`O rg informado foi ${rg.val()}`);
         cep.val("").focus();
       } else {
-        console.log("rg incorreto");
         rg.val("");
       }
     }
