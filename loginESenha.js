@@ -10,7 +10,7 @@ let resultado2=''
 
 botaoLogin.on('click', ()=>{ 
     if(!regexEmail.exec(email.val())){
-        alert(`O e-mail ${email.val()} não é válido!`)
+        alert(`O e-mail ${email.val()} não é válido! Prencha no formato: exemplo@exemplo.com`)
         resultado1 = false 
     }
     else{
@@ -49,7 +49,7 @@ botaoLogin.on('click', ()=>{
 
 botaoEsqueci.on('click', ()=>{ 
     if(!regexEmail.exec(emailEsq.val())){
-        alert(`O e-mail ${emailEsq.val()} não é válido!`)   
+        alert(`O e-mail ${emailEsq.val()} não é válido! Prencha no formato: exemplo@exemplo.com`)   
     }
     else{
         alert('Um e-mail com instrução de redefinição de senha foi enviado.')
