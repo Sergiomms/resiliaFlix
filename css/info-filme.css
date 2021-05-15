@@ -12,3 +12,10 @@ a{
     width: 30vw;
     margin: 20px;
 }
+#voltar{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
