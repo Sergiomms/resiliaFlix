@@ -1,35 +1,33 @@
-*{
-
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    
 }
 
-body{
-
+body {
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
     background-color: #5a5a5a;
-    min-height: 100vh;
     color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
 }
 
-.pLogo{
+.pLogo {
     text-decoration: none;
     display: inline-block;
 }
 
-nav{
-
+nav {
     list-style: none;
     background-color: #2F2E2E;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
-
 }
-.logo{
 
+.logo {
     color: #FAD000;
     font-size: 35px;
     line-height: 80px;
@@ -38,30 +36,25 @@ nav{
     text-decoration: none;
 }
 
-.logo:hover{
-
+.logo:hover {
     color: #FAD000;
     cursor: pointer;
     background-color: #2F2E2E;
     text-decoration: none;
-
 }
 
-nav .navBar{
-
+nav .navBar {
     float: right;
     margin-right: 20px;
 }
 
-nav .navBar li{
-
+nav .navBar li {
     display: inline-block;
     line-height: 80px;
     margin-right: 0 5px;
 }
 
-nav .navBar li a{
-    
+nav .navBar li a {
     color: #FFFFFF;
     font-size: 17px;
     padding: 7px 13px;
@@ -69,35 +62,61 @@ nav .navBar li a{
     text-transform: uppercase;
 }
 
-a:hover{
-
+a:hover {
     text-decoration: none;
     background-color: black;
     transition: .5s;
 }
-.capa{
-    width: 30vw;
-    margin: 20px;
+
+/* Div filmes */
+
+main {
+    width: 60vw;
+    align-self: center;
+    padding-bottom: 4rem;
 }
-#voltar{
+
+#titulo {
+    font-size: 2.4rem;
+}
+
+#infoFilme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px;
+    padding: 60px;
+    font-size: 1.2rem;
+    text-align: justify;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+img {
+    width: 18vw;
+    margin: 10px;
+}
+
+#voltar {
     background-color: transparent;
     border: none;
-    text-align: center;
+    text-align: start;
+    font-size: 1.3rem;
     text-decoration: none;
     color: #ffffff;
 }
 
-footer{
+/* Footer */
 
+footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 4rem;
     display: flex;
-    height: 50px;
     background-color: #000000;
     color: #FFFFFF;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    position: relative;
-    bottom: 0;
-
 }

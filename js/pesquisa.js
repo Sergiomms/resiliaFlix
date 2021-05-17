@@ -4,23 +4,22 @@ var inputGlobal = ''
 $(document).ready(function () {
     verificaAnterior()
     //insereFilmes(objTeste)
-    
+
     $('.submit').on('click', function (event) {
         event.preventDefault()
         $('.alert').addClass('d-none')
         const input = $('#pesquisa').val()
         inputGlobal = input
         pesquisar(input)
-        console.log('sai')
     })
     $('#resultado').click(nextPage)
 
 })
 
-function verificaAnterior(){
+function verificaAnterior() {
     const paramsRecebido = new URLSearchParams(window.location.search)
     input = paramsRecebido.get('pesquisa')
-    if(input){
+    if (input) {
         $('#pesquisa').val(input)
         inputGlobal = input
         pesquisar(input)
@@ -36,9 +35,10 @@ function pesquisar(input) {
             'type': 'movie'
         },
         'success': function (result) {
+            console.log(result)
             document.querySelector('#resultado').innerHTML = ''
             try {
-                console.log(insereFilmes(result))
+                insereFilmes(result)
             } catch (e) {
                 $('.alert').text(e.message)
                 $('.alert').removeClass('d-none')
@@ -52,7 +52,7 @@ function pesquisar(input) {
 function insereFilmes(obj) {
     if (obj.Response === "True") {
         criaElemento(obj.Search)
-        return 'success'
+        return
     } else {
         throw new Error('Filme não encontrado')
     }
@@ -66,7 +66,7 @@ function criaElemento(arr) {
             <div class="filme m-2">
                 <button class="btn-title" >
                     <div class="div-poster">
-                        <img class="capa" src="${element.Poster}" data-id = "${element.imdbID}">
+                        <img class="capa" src="${element.Poster}" data-id = "${element.imdbID}" alt="Poster indisponível">
                     </div>
                 </button>
                 <p class="mx-2">${element.Title}</p>
@@ -153,15 +153,15 @@ const objTeste = {
     "Response": "True"
 }
 
-function nextPage(e){
-    if(e.target.classList.contains('capa')){
+function nextPage(e) {
+    if (e.target.classList.contains('capa')) {
         console.log('page')
         const id = e.target.getAttribute('data-id')
         params = new URLSearchParams()
         params.append('id', id)
         params.append('anterior', 'pesquisa.html')
         params.append('pesquisa', inputGlobal)
-    
+
         const url = 'info-filme.html?' + params.toString()
         location.href = url
     }
