@@ -101,7 +101,7 @@ button{
     width: 200px;
 }
 
-footer{
+footer span{
 
     width: 100%;
     display: flex;
@@ -110,5 +110,8 @@ footer{
     font-weight: bolder;
     bottom: 0;
     height: 50px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 
 }
