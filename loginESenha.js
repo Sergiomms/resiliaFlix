@@ -5,6 +5,7 @@ const regexSenha = /^(?=(?:.*?[A-Z]){1})(?=(?:.*?[0-9]){1})(?=(?:.*?[!@#$%*()_+^
 const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$/
 let botaoLogin = $('#botaoLogin')
 let botaoEsqueci = $('#esqueciSenha')
+let loginEsqueci = $('#loginEsqueci')
 let resultado1=''
 let resultado2=''
 
@@ -40,7 +41,7 @@ botaoLogin.on('click', ()=>{
 botaoLogin.on('click', ()=>{ 
     $('form').submit(false)
     if(resultado1 === true && resultado2 === true){
-        alert('Login realizado com sucesso!')
+        window.location.href='home.html'
         email.val('')
         senha.val('')
     }
@@ -54,4 +55,8 @@ botaoEsqueci.on('click', ()=>{
     else{
         alert('Um e-mail com instrução de redefinição de senha foi enviado.')
     }
+})
+
+loginEsqueci.on('click', ()=>{
+    window.location.href="esqueciASenha.html"
 })
