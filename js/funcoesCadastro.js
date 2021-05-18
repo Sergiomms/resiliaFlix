@@ -8,7 +8,7 @@ function validacaoNome(nome) {
   let valorNome = nome.val();
   let validacaoPrincipal = /\S+\ +\S+/;
   let validacao1 = /[0-9]/;
-  if (valorNome !== "") {
+  if (valorNome !== "Digite seu nome aqui!") {
     if (validacao1.test(valorNome)) {
       alert("Digite nome e sobrenome");
       nome.val("").focus();
