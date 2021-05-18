@@ -75,21 +75,21 @@ a:hover{
 }
 
 .d-flex{
-
     width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .capaFilme{
+    margin: 20px;
+}
 
-    margin: 05px;
+.capaFilme:hover{
+    opacity: 0.4;
 }
 
 #img1{
-
-    width: 20em;
-    height: 25em;
+    width: 16em;
 }
 
 footer{
