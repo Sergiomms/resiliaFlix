@@ -1,118 +1,71 @@
-*{
-
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    
-}
-
 body{
-
+    background-color:aliceblue;
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
-    min-height: 100vh;
-    position: relative;
-    margin: 0;
-    padding-bottom: 100px;
-    box-sizing: border-box;
 }
 
-.pLogo{
-    text-decoration: none;
-    display: inline-block;
-}
+.quadrado1{
 
-nav{
-
-    list-style: none;
-    background-color: #2F2E2E;
-    /* color: #FFFFFF; */
-    height: 80px;
-    width: 100%;
-
-}
-.logo{
-
-    color: #FAD000;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bolder;
-}
-
-.logo:hover{
-
-    color: #FAD000;
-    cursor: pointer;
-    background-color: #2F2E2E;
-    text-decoration: none;
-
-}
-
-nav .navBar{
-
-    float: right;
-    margin-right: 20px;
-}
-
-nav .navBar li{
-
-    display: inline-block;
-    line-height: 80px;
-    margin-right: 0 5px;
-}
-
-nav .navBar li a{
-    
-    color: #FFFFFF;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-
-a:hover{
-
-    text-decoration: none;
-    background-color: black;
-    transition: .5s;
-}
-
-.d-flex{
-
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.capaFilme{
-
-    margin: 05px;
-}
-
-#img1{
-
-    width: 15em;
-    height: 20em;
-}
-
-button{
-    width: 200px;
-}
-
-footer span{
-
-    width: 100%;
+    box-shadow: 1px 1px 5px "color"= darkgray;
+    background-color: lavender;
+    padding: 30px;
+    border-radius: 5px;
+    width: 50%;
     display: flex;
-    background-color: #000000;
-    color: #FFFFFF;
-    font-weight: bolder;
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
+    margin:auto;
+}
 
+.login{
+
+    width: 400px;
+    display: flex;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.card > label{
+    width: 100px;
+    color:lightcoral;
+    display: block;
+}
+
+.card > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 20%;
+    height: 25px;
+    padding: 5px;
+}
+
+.card1 > label{
+margin-bottom: 10px;
+width: 100px;
+color:lightcoral;
+display: block;
+}
+
+.card1 > input{
+    border-radius: 5px;
+    outline: 0;
+    width: 20%;
+    height: 25px;
+    padding: 5px;
+}
+
+.cardBotao > button{
+    background-image:linear-gradient(to right, red, #300308);
+    width: 20%;
+    border-radius: 30px;
+    padding: 15px;
+    color:lightcyan;
+    border:0px;
+}
+
+.btn button:hover{
+    background-image:linear-gradient(to right, #5a0c14, red);
+}
+
+.cardEsqueciSenha{
+    width: 100%;
+    padding: 10px;
+    color:black;
 }
