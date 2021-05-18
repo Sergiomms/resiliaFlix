@@ -7,8 +7,7 @@
 body{
     background-color: #5a5a5a;
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
+    color: #FFFFFF;
 }
 
 .pLogo{
@@ -71,12 +70,15 @@ a:hover{
 }
 
 .capaFilme{
-    margin: 05px;
+    margin: 20px;
+}
+
+.capaFilme:hover{
+    opacity: 0.4;
 }
 
 #img1{
-    width: 20em;
-    height: 25em;
+    width: 16em;
 }
 
 footer{

@@ -6,100 +6,107 @@
     
 }
 
-body{
-
+body {
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
+    background-color: #5a5a5a;
     min-height: 100vh;
+    color: #FFFFFF;
     position: relative;
-    margin: 0;
-    padding-bottom: 100px;
-    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.pLogo{
+.pLogo {
     text-decoration: none;
     display: inline-block;
 }
 
-nav{
-
+nav {
     list-style: none;
     background-color: #2F2E2E;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
-
 }
-.logo{
 
+.logo {
     color: #FAD000;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bolder;
+    text-decoration: none;
 }
 
-.logo:hover{
-
+.logo:hover {
     color: #FAD000;
     cursor: pointer;
     background-color: #2F2E2E;
     text-decoration: none;
-
 }
 
-nav .navBar{
-
+nav .navBar {
     float: right;
     margin-right: 20px;
 }
 
-nav .navBar li{
-
+nav .navBar li {
     display: inline-block;
     line-height: 80px;
     margin-right: 0 5px;
 }
 
-nav .navBar li a{
-    
+nav .navBar li a {
     color: #FFFFFF;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-a:hover{
-
+a:hover {
     text-decoration: none;
     background-color: black;
     transition: .5s;
 }
 
-.d-flex{
 
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+/* Main */
+
+.quadrado1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px;
+    padding: 60px;
+    font-size: 1.2rem;
+    text-align: justify;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50vw;
 }
 
-.capaFilme{
-
-    margin: 05px;
+.card{
+    background-color: transparent;
+    border: none;
+}
+.cardBotao>button {
+    background-image: linear-gradient(to right, yellow, #FAD000);
+    width: 15vw;
+    border-radius: 30px;
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+    border: 0px;
+    margin-top: 20px;
 }
 
-#img1{
-
-    width: 15em;
-    height: 20em;
+.btn button:hover {
+    background-image: linear-gradient(to right, #FAD000, yellow);
 }
 
-button{
-    width: 200px;
-}
 
 footer span{
 

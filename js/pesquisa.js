@@ -76,6 +76,22 @@ function criaElemento(arr) {
     });
 }
 
+
+function nextPage(e) {
+    if (e.target.classList.contains('capa')) {
+        console.log('page')
+        const id = e.target.getAttribute('data-id')
+        params = new URLSearchParams()
+        params.append('id', id)
+        params.append('anterior', 'pesquisa.html')
+        params.append('pesquisa', inputGlobal)
+        
+        const url = 'info-filme.html?' + params.toString()
+        location.href = url
+    }
+    
+}
+
 const objTeste = {
     "Search": [
         {
@@ -151,19 +167,4 @@ const objTeste = {
     ],
     "totalResults": "79",
     "Response": "True"
-}
-
-function nextPage(e) {
-    if (e.target.classList.contains('capa')) {
-        console.log('page')
-        const id = e.target.getAttribute('data-id')
-        params = new URLSearchParams()
-        params.append('id', id)
-        params.append('anterior', 'pesquisa.html')
-        params.append('pesquisa', inputGlobal)
-
-        const url = 'info-filme.html?' + params.toString()
-        location.href = url
-    }
-
 }
