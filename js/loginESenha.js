@@ -41,7 +41,7 @@ botaoLogin.on('click', ()=>{
 botaoLogin.on('click', ()=>{ 
     $('form').submit(false)
     if(resultado1 === true && resultado2 === true){
-        window.location.href='home.html'
+        window.location.href='./home.html'
         email.val('')
         senha.val('')
     }
@@ -58,5 +58,5 @@ botaoEsqueci.on('click', ()=>{
 })
 
 loginEsqueci.on('click', ()=>{
-    window.location.href="esqueciASenha.html"
+    window.location.href="./esqueciASenha.html"
 })
