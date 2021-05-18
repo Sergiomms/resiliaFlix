@@ -1,0 +1,117 @@
+*{
+
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+body{
+
+    font-family: sans-serif;
+    /* background-color: #2F2E2E; */
+    /* color: #FFFFFF; */
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.pLogo{
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav{
+
+    list-style: none;
+    background-color: #2F2E2E;
+    /* color: #FFFFFF; */
+    height: 80px;
+    width: 100%;
+
+}
+.logo{
+
+    color: #FAD000;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+.logo:hover{
+
+    color: #FAD000;
+    cursor: pointer;
+    background-color: #2F2E2E;
+    text-decoration: none;
+
+}
+
+nav .navBar{
+
+    float: right;
+    margin-right: 20px;
+}
+
+nav .navBar li{
+
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 0 5px;
+}
+
+nav .navBar li a{
+    
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a:hover{
+
+    text-decoration: none;
+    background-color: black;
+    transition: .5s;
+}
+
+.d-flex{
+
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.capaFilme{
+
+    margin: 05px;
+}
+
+#img1{
+
+    width: 15em;
+    height: 20em;
+}
+
+button{
+    width: 200px;
+}
+
+footer span{
+
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: bolder;
+    bottom: 0;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+}

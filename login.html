@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login - ResiliaFlix</title>
-<link rel="stylesheet" href="./css/styleLogin.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
+
 <body>
+    <header>
+        <nav>
+          <p class="pLogo"><a href="index.html" class="logo">ResiliaFlix</a></p>
+          <ul class="navBar">
+            <li><a href="pesquisa.html">Pesquisa</a></li>
+            <li><a href="cadastro.html">Perfil</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="login.html.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
 
-    <form class="Login" action="">
+    <form class="form-group" action="">
 
-     <div class="quadrado1">
+        <div class="quadrado1">
 
-             <div class="boxInfo">
-               <img src="" alt="">
-               <h2>Bem-vindo, Fulano</h2>
-               <p>Fazer Login</p>
-           </div>
+            <div class="boxInfo">
+                <h2>Bem-vindo!</h2>
+                <p>Faça login abaixo.</p>
+            </div>
         </div>
 
-        <div class= "card">
+        <div>
             <label>Email</label>
-            <input type= "email" name="email" placeholder="Email ou número de telefone">
+            <input id="emailLogin" class="form-control" type="email" name="email" placeholder="exemplo@exemplo.com">
 
         </div>
+        
+        <br>
 
-        <div class= "card1">
+        <div class="card1">
             <label>Senha</label>
-            <input type= "password" name="senha" placeholder="Senha">
+            <input id="senhaLogin" class="form-control" type="password" name="senha">
 
         </div>
 
-        <div class= "cardLembre">
-        <label><input type="checkbox"> Lembre-se de mim</label>
+        <div class="cardLembre">
+            <label><input type="checkbox"> Lembre-se de mim</label>
 
         </div>
 
-        <div class= "cardBotao btn">
-            <button type="submit">Entrar</button>
-    
-            </div>
+        <div class="cardBotao btn">
+            <button id="botaoLogin" type="button" class="btn btn-dark">Entrar</button>
 
-            <div class= "cardEsqueciSenha">
-            <button type="submit">Esqueci minha senha</button>
-    
-            </div>
-            
-            
+        </div>
+
+        
+            <button id="loginEsqueci" type="button" class="btn btn-dark">Esqueci minha senha</button>
+
+        
+
+
 
     </form>
-    
+
+
+    <footer class="footer text-center">
+        <span id="copy">Copyright &copy; Todos direitos reservados - Resilia T5 Grupo 01 - Modulo02</span>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/loginESenha.js"></script>
 </body>
+
 </html>
