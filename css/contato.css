@@ -6,6 +6,10 @@
     
 }
 
+h3{
+    margin-top: 10px;
+}
+
 #conteudo h3{
     display: block;
 }
@@ -18,18 +22,32 @@
 }
 
 .card{
-    border: 1px solid blue;
-    margin: 4px;
-
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 
+a{
+    text-decoration: none;
+    color: #FFFFFF;
 
-body{
-    background-color: #5a5a5a; color: white; 
+}
+
+#cinthia{
+    margin-top: 30px;
+}
+
+#sergio{
+    margin-bottom: 30px;
+}
+
+body {
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
+    background-color: #5a5a5a;
+    min-height: 100vh;
+    color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
 }
 
 .pLogo{
@@ -101,17 +119,17 @@ a:hover{
 }
 
 
-footer{
-
+footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 4rem;
     display: flex;
-    height: 50px;
     background-color: #000000;
     color: #FFFFFF;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-
 }
 
 /* #2F2E2E
