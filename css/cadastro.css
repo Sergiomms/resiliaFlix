@@ -60,6 +60,46 @@ a:hover {
   background-color: black;
   transition: 0.5s;
 }
+
+form {
+  margin: 5% 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.col2 {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#enviar {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 30%;
+}
+
 footer {
   width: 100%;
   display: flex;
@@ -70,16 +110,3 @@ footer {
   align-items: center;
   font-weight: bolder;
 }
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.col1 {
-  width: 40%;
-}
-/* .col2 {
-  width: 40%;
-} */
