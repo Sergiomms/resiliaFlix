@@ -1,84 +1,60 @@
-*{
-
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    
 }
 
-#conteudo h3{
-    display: block;
-}
-
-
-#conteudo{
-    display: inline-block;
-    width: 100%;
-
-}
-
-.card{
-    border: 1px solid blue;
-    margin: 4px;
-
-}
-
-
-
-body{
-    background-color: #5a5a5a; color: white; 
+body {
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
+    background-color: #5a5a5a;
+    color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
 }
 
-.pLogo{
+.pLogo {
     text-decoration: none;
     display: inline-block;
 }
 
-nav{
-
+nav {
     list-style: none;
     background-color: #2F2E2E;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
-
 }
-.logo{
 
+.logo {
     color: #FAD000;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bolder;
+    text-decoration: none;
 }
 
-.logo:hover{
-
+.logo:hover {
     color: #FAD000;
     cursor: pointer;
     background-color: #2F2E2E;
     text-decoration: none;
-
 }
 
-nav .navBar{
-
+nav .navBar {
     float: right;
     margin-right: 20px;
 }
 
-nav .navBar li{
-
+nav .navBar li {
     display: inline-block;
     line-height: 80px;
     margin-right: 0 5px;
 }
 
-nav .navBar li a{
-    
+nav .navBar li a {
     color: #FFFFFF;
     font-size: 17px;
     padding: 7px 13px;
@@ -86,34 +62,61 @@ nav .navBar li a{
     text-transform: uppercase;
 }
 
-a:hover{
-
+a:hover {
     text-decoration: none;
     background-color: black;
     transition: .5s;
 }
 
-.d-flex{
+/* Div filmes */
 
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+main {
+    width: 60vw;
+    align-self: center;
+    padding-bottom: 4rem;
 }
 
+#titulo {
+    font-size: 2.4rem;
+}
 
-footer{
-
-    width: 100%;
+#infoFilme {
     display: flex;
-    height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px;
+    padding: 60px;
+    font-size: 1.2rem;
+    text-align: justify;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+img {
+    width: 18vw;
+    margin: 10px;
+}
+
+#voltar {
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
     background-color: #000000;
     color: #FFFFFF;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-
 }
-
-/* #2F2E2E
-#FAD000 */
-

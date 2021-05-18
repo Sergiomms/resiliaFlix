@@ -1,84 +1,59 @@
-*{
-
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    
 }
 
-#conteudo h3{
-    display: block;
-}
-
-
-#conteudo{
-    display: inline-block;
-    width: 100%;
-
-}
-
-.card{
-    border: 1px solid blue;
-    margin: 4px;
-
-}
-
-
-
-body{
-    background-color: #5a5a5a; color: white; 
+body {
     font-family: sans-serif;
-    /* background-color: #2F2E2E; */
-    /* color: #FFFFFF; */
+    background-color: #5a5a5a;
+    min-height: 100vh;
+    color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
 }
 
-.pLogo{
+.pLogo {
     text-decoration: none;
     display: inline-block;
 }
 
-nav{
-
+nav {
     list-style: none;
     background-color: #2F2E2E;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
-
 }
-.logo{
 
+.logo {
     color: #FAD000;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bolder;
+    text-decoration: none;
 }
 
-.logo:hover{
-
+.logo:hover {
     color: #FAD000;
     cursor: pointer;
     background-color: #2F2E2E;
     text-decoration: none;
-
 }
 
-nav .navBar{
-
+nav .navBar {
     float: right;
     margin-right: 20px;
 }
 
-nav .navBar li{
-
+nav .navBar li {
     display: inline-block;
     line-height: 80px;
     margin-right: 0 5px;
 }
 
-nav .navBar li a{
-    
+nav .navBar li a {
     color: #FFFFFF;
     font-size: 17px;
     padding: 7px 13px;
@@ -86,34 +61,59 @@ nav .navBar li a{
     text-transform: uppercase;
 }
 
-a:hover{
-
+a:hover {
     text-decoration: none;
     background-color: black;
     transition: .5s;
 }
 
-.d-flex{
-
-    width: 100%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+#pesquisa {
+    margin-left: 60px;
 }
 
+main {
+    padding-bottom: 4rem;
+}
 
-footer{
+.capa {
+    width: 15vw;
+    margin: 10px;
+}
 
-    width: 100%;
+.capa:hover {
+    transform: scale(1.1);
+}
+
+.div-poster {
+    height: 25vw
+}
+
+.filme {
+    width: 18vw;
     display: flex;
-    height: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filme>p {
+    text-align: center;
+}
+
+.btn-title {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
     background-color: #000000;
     color: #FFFFFF;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-
 }
-
-/* #2F2E2E
-#FAD000 */
-
