@@ -9,21 +9,22 @@ function validacaoNome(nome) {
   let validacaoPrincipal = /\S+\ +\S+/;
   let validacao1 = /[0-9]/;
   if (valorNome !== "") {
-    if(validacao1.test(valorNome)) {
-        alert("Digite nome e sobrenome");
-        nome.val("").focus();
-        return
-    }
-    else if (validacaoPrincipal.test(valorNome)) {
+    if (validacao1.test(valorNome)) {
+      alert("Digite nome e sobrenome");
+      nome.val("").focus();
+      return false;
+    } else if (validacaoPrincipal.test(valorNome)) {
       $("#email").val("").focus();
       return true;
     } else {
       alert("Digite nome e sobrenome");
       nome.val("").focus();
+      return false;
     }
   } else {
     alert("Digite nome e sobrenome");
     nome.val("").focus();
+    return false;
   }
 }
 
@@ -35,10 +36,14 @@ function validacaoEmail(email) {
       $("#senha").val("").focus();
       return true;
     } else {
+      alert("Digite um email válido como:\nexemplo@diretorio.com");
       email.val("").focus();
+      return false;
     }
   } else {
+    alert("Digite um email válido como:\nexemplo@diretorio.com");
     email.val("").focus();
+    return false;
   }
 }
 
@@ -84,12 +89,14 @@ function validacaoSenha(senha) {
         "Senha deve conter no mínimo 6 caracteres sendo:\n1 letra maiúscula\n1 letra minúscula\n1 caracter especial\n números",
       );
       senha.val("").focus();
+      return false;
     }
   } else {
     alert(
       "Senha deve conter no mínimo 6 caracteres sendo:\n1 letra maiúscula\n1 letra minúscula\n1 caracter especial\n números",
     );
     senha.val("").focus();
+    return false;
   }
 }
 
@@ -100,6 +107,7 @@ function verificaConfirmacaoSenha(confirmacaoSenha, senha) {
   } else {
     alert("Senhas estão diferentes, digite novamente!");
     confirmacaoSenha.val("").focus();
+    return false;
   }
 }
 
@@ -114,10 +122,12 @@ function validacaoRg(rg) {
     } else {
       alert("Rg deve ter pelo menos 7 dígitos");
       rg.val("").focus();
+      return false;
     }
   } else {
     alert("Digite apenas os números do rg");
     rg.val("").focus();
+    return false;
   }
 }
 
@@ -168,11 +178,13 @@ function validacaoCep(cep) {
         limpa_formulário_cep();
         alert("cep inválido digite novamente");
         cep.val("").focus();
+        return false;
       },
     });
   } else {
     limpa_formulário_cep();
     alert("Digite apenas o números do cep");
     cep.val("").focus();
+    return false;
   }
 }

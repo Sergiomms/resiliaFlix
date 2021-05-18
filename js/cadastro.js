@@ -5,12 +5,13 @@ $(document).ready(() => {
   let cep = $("#cep");
   let senha = $("#senha");
   let confirmacaoSenha = $("#confirmacaoSenha");
-  let btnEnviar = $("#btnEnviar");
+  let btnEnviar = $("#enviar");
+  let numero = $("#numero");
 
-  limpaInputDepoisDoEvento(nome, "click");
-  limpaInputDepoisDoEvento(email, "click");
-  limpaInputDepoisDoEvento(rg, "click");
-  limpaInputDepoisDoEvento(cep, "click");
+  limpaInputDepoisDoEvento(nome, "focus");
+  limpaInputDepoisDoEvento(email, "focus");
+  limpaInputDepoisDoEvento(rg, "focus");
+  limpaInputDepoisDoEvento(cep, "focus");
 
   nome.change(() => {
     validacaoNome(nome);
@@ -34,7 +35,22 @@ $(document).ready(() => {
   cep.change(() => {
     validacaoCep(cep);
   });
-  btnEnviar.click(() => {
-    location.href = "./home.html";
+  numero.change(() => {
+    btnEnviar.focus();
+  });
+  btnEnviar.click((event) => {
+    let formValido = true;
+    if (
+      formValido === validacaoNome(nome) &&
+      formValido === validacaoEmail(email) &&
+      formValido === validacaoSenha(senha) &&
+      formValido === verificaConfirmacaoSenha(confirmacaoSenha, senha) &&
+      formValido === validacaoRg(rg) &&
+      formValido === validacaoCep(cep)
+    ) {
+      location.href = "../home.html";
+    } else {
+      event.preventDefault();
+    }
   });
 });
