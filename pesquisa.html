@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resiliaflix - Pesquisa</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/pesquisa.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/pesquisa.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p class="pLogo"><a href="index.html" class="logo">ResiliaFlix</a></p>
+            <ul class="navBar">
+                <li><a href="pesquisa.html">Pesquisa</a></li>
+                <li><a href="cadastro.html">Perfil</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="d-flex">
+            <form class="m-4">
+                <input type="search" id="pesquisa" placeholder="Digite aqui...">
+                <button type="submit" class="submit btn btn-sm btn-warning"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="alert alert-danger col-sm-3 d-none"></div>
+        </div>
+
+        <div id="resultado" class="d-flex flex-wrap m-3"></div>
+
+    </main>
+    <footer class="d-flex justify-content-center mt-5">
+        Copyright &copy; Todos direitos reservados - Resilia T5 Grupo 01 - Modulo02
+    </footer>
+</body>
+
+</html>
