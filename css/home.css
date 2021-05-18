@@ -8,6 +8,7 @@
 
 body{
 
+    background-color: #5a5a5a;
     font-family: sans-serif;
     /* background-color: #2F2E2E; */
     /* color: #FFFFFF; */
@@ -88,8 +89,8 @@ a:hover{
 
 #img1{
 
-    width: 15em;
-    height: 20em;
+    width: 20em;
+    height: 25em;
 }
 
 footer{

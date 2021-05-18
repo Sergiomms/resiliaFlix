@@ -13,7 +13,7 @@ class Filme {
     let arrFilmes = []
 
     let arrIds = ['tt0241527','tt0120737', 'tt0133093', 'tt1001508', 'tt3065204', 'tt1189073', 
-    'tt1023111', 'tt0304141','tt0381707', 'tt1232829']
+    'tt1023111', 'tt0304141','tt0381707', 'tt1232829', 'tt4046784', 'tt0449088']
     for(let i = 0; i<arrIds.length; i++){
         request(arrIds[i])
     }
