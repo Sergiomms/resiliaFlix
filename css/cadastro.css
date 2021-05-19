@@ -114,7 +114,8 @@ input {
   color: #000000;
   font-weight: bold;
   border: 0px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 footer {
