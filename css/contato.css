@@ -1,0 +1,178 @@
+*{
+
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
+}
+
+.pLogo{
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav{
+
+    list-style: none;
+    background-color: #2F2E2E;
+    /* color: #FFFFFF; */
+    height: 80px;
+    width: 100%;
+
+}
+.logo{
+
+    color: #FAD000;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+.logo:hover{
+
+    color: #FAD000;
+    cursor: pointer;
+    background-color: #2F2E2E;
+    text-decoration: none;
+
+}
+
+nav .navBar{
+
+    float: right;
+    margin-right: 20px;
+}
+
+nav .navBar li{
+
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 0 5px;
+}
+
+nav .navBar li a{
+    
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FFFFFF;
+}
+
+a:hover{
+
+    text-decoration: none;
+    text-transform: none;
+    background-color: black;
+    transition: .5s;
+}
+
+.d-flex{
+
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+#conteudo h3{
+    display: block;
+}
+
+
+#conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 17vw;
+}
+
+.card a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FFFFFF;
+}
+.card a:hover{
+    color: #FAD000;
+    padding: 5px;
+}
+
+.card p{
+    font-size: 2rem;
+}
+
+.card p a{
+    margin: 0 30px;
+}
+
+hr{
+    width: 17vw;
+    background-color: #FAD000;
+}
+
+h4>a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FAD000;
+}
+h4>a:hover{
+    color: #FFF;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    background-color: #000000;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+/* #2F2E2E
+#FAD000 */
+
