@@ -54,6 +54,7 @@ botaoEsqueci.on('click', ()=>{
     }
     else{
         alert('Um e-mail com instrução de redefinição de senha foi enviado.')
+        location.href = "./index.html";
     }
 })
 
