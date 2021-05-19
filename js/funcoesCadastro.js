@@ -41,6 +41,7 @@ function validacaoEmail(email) {
       return false;
     }
   } else {
+    console.log('')
     alert("Digite um email válido como:\nexemplo@diretorio.com");
     email.val("").focus();
     return false;

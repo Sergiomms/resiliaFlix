@@ -6,44 +6,12 @@
     
 }
 
-h3{
-    margin-top: 10px;
-}
-
-#conteudo h3{
-    display: block;
-}
-
-
-#conteudo{
-    display: inline-block;
-    width: 100%;
-
-}
-
-.card{
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-
-a{
-    text-decoration: none;
-    color: #FFFFFF;
-
-}
-
-#cinthia{
-    margin-top: 30px;
-}
-
-#sergio{
-    margin-bottom: 30px;
-}
 
 body {
     font-family: sans-serif;
     background-color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     color: #FFFFFF;
     position: relative;
@@ -104,9 +72,16 @@ nav .navBar li a{
     text-transform: uppercase;
 }
 
+a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FFFFFF;
+}
+
 a:hover{
 
     text-decoration: none;
+    text-transform: none;
     background-color: black;
     transition: .5s;
 }
@@ -116,6 +91,72 @@ a:hover{
     width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+#conteudo h3{
+    display: block;
+}
+
+
+#conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 17vw;
+}
+
+.card a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FFFFFF;
+}
+.card a:hover{
+    color: #FAD000;
+    padding: 5px;
+}
+
+.card p{
+    font-size: 2rem;
+}
+
+.card p a{
+    margin: 0 30px;
+}
+
+hr{
+    width: 17vw;
+    background-color: #FAD000;
+}
+
+h4>a{
+    text-decoration: none;
+    text-transform: none;
+    color: #FAD000;
+}
+h4>a:hover{
+    color: #FFF;
 }
 
 

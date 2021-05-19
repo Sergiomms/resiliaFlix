@@ -39,18 +39,19 @@ $(document).ready(() => {
     btnEnviar.focus();
   });
   btnEnviar.click((event) => {
-    let formValido = true;
+    location.href = "../home.html";
+    /* let formValido = true;
     if (
       formValido === validacaoNome(nome) &&
       formValido === validacaoEmail(email) &&
       formValido === validacaoSenha(senha) &&
       formValido === verificaConfirmacaoSenha(confirmacaoSenha, senha) &&
       formValido === validacaoRg(rg) &&
-      formValido === validacaoCep(cep)
+      formValido === validacaoCep(cep) 
     ) {
       location.href = "../home.html";
     } else {
       event.preventDefault();
-    }
+    }*/
   });
 });
