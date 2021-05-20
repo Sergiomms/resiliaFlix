@@ -38,7 +38,7 @@ function request(id) {
             const filme = new Filme(result.Poster, id)
 
             arrFilmes.push(filme)
-            console.log(result.Poster)
+            // console.log(result.Poster)
 
         },
         'error': function (erro) {
@@ -49,14 +49,14 @@ function request(id) {
     })
 }
 
-setTimeout(myFunc, 2000)
+// setTimeout(myFunc, 2000)
 
-function myFunc() {
+// function myFunc() {
 
-    console.log(arrFilmes[3])
-}
+//     console.log(arrFilmes[3])
+// }
 
-setTimeout(insereNoHtml, 1000)
+setTimeout(insereNoHtml, 1500)
 
 function insereNoHtml() {
 
