@@ -1,3 +1,4 @@
+
 *{
 
     padding: 0%;
@@ -5,7 +6,6 @@
     box-sizing: border-box;
     
 }
-
 
 body {
     font-family: sans-serif;
@@ -23,10 +23,19 @@ body {
     display: inline-block;
 }
 
+
+.fraseCriadores{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 nav{
 
     list-style: none;
-    background-color: #2F2E2E;
+    background-color: #000000; border-radius: 3px;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
@@ -34,18 +43,18 @@ nav{
 }
 .logo{
 
-    color: #FAD000;
+    color: #FAD000; 
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 50px;
     font-weight: bolder;
 }
 
 .logo:hover{
 
-    color: #FAD000;
+    color: white;
     cursor: pointer;
-    background-color: #2F2E2E;
+    background-color: #262323;
     text-decoration: none;
 
 }
@@ -65,10 +74,10 @@ nav .navBar li{
 
 nav .navBar li a{
     
-    color: #FFFFFF;
+    color: #FAD000;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 5px;
     text-transform: uppercase;
 }
 
@@ -106,7 +115,6 @@ h3{
 #conteudo h3{
     display: block;
 }
-
 
 #conteudo{
     display: flex;
@@ -168,9 +176,8 @@ footer {
     display: flex;
     background-color: #000000;
     color: #FFFFFF;
+    display:flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
 }
-
-
