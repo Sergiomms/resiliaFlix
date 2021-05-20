@@ -35,7 +35,6 @@ function request(id) {
 
     })
 }
-
 function insereNoHtml(arrFilmes) {
 
     let catalagoFilmes = $('#catalogoFilmes')
