@@ -26,7 +26,6 @@ function request(id) {
             arrFilmes.push(filme)
             insereNoHtml(arrFilmes)
             console.log(result.Poster)
-
         },
         'error': function (erro) {
 
