@@ -39,19 +39,17 @@ $(document).ready(() => {
     btnEnviar.focus();
   });
   btnEnviar.click((event) => {
-    location.href = "../home.html";
-    /* let formValido = true;
-    if (
-      formValido === validacaoNome(nome) &&
-      formValido === validacaoEmail(email) &&
-      formValido === validacaoSenha(senha) &&
-      formValido === verificaConfirmacaoSenha(confirmacaoSenha, senha) &&
-      formValido === validacaoRg(rg) &&
-      formValido === validacaoCep(cep) 
+    if (nome.val()!== "" &&
+        email.val()!== "" &&
+        senha.val()!== "" &&
+        rg.val()!== "" &&
+        cep.val()!== "" &&
+        numero.val()!== ""
     ) {
-      location.href = "../home.html";
+      location.href = "./home.html";
     } else {
       event.preventDefault();
-    }*/
+      alert('Por favor, preencha todos os campos obrigatórios')
+    }
   });
 });

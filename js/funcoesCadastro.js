@@ -171,7 +171,6 @@ function validacaoCep(cep) {
         $("#bairro").val(dados.bairro);
         $("#cidade").val(dados.localidade);
         $("#estado").val(dados.uf);
-        $("#complemento").val(dados.complemento);
         $("#numero").val("").focus();
         return true;
       },
