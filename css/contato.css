@@ -1,17 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+  height: 100%;
+}
+
+
 #conteudo h3{
-    display: block;
+    display: flex;
+
+
 }
 
 
 #conteudo{
-    display: inline-block;
+    display:block;
     width: 100%;
+    
 
 }
 
 .card{
-    border: 1px solid blue;
-    margin: 4px;
+    border: 2px solid rgb(169, 155, 155); border-radius: 5px;
+    margin: 10px;
+    
+    
 }
 
 *{
@@ -23,8 +38,11 @@
 }
 
 body{
-    background-color: #5a5a5a; color: white; 
+    background-color: white; color: black;
+    border-radius: 5px;
     font-family: sans-serif;
+    height: 100px;
+    
     /* background-color: #2F2E2E; */
     /* color: #FFFFFF; */
 }
@@ -34,10 +52,19 @@ body{
     display: inline-block;
 }
 
+
+.fraseCriadores{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 nav{
 
     list-style: none;
-    background-color: #2F2E2E;
+    background-color: #000000; border-radius: 3px;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
@@ -45,18 +72,18 @@ nav{
 }
 .logo{
 
-    color: #FAD000;
+    color: #FAD000; 
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding: 0 50px;
     font-weight: bolder;
 }
 
 .logo:hover{
 
-    color: #FAD000;
+    color: white;
     cursor: pointer;
-    background-color: #2F2E2E;
+    background-color: #262323;
     text-decoration: none;
 
 }
@@ -76,17 +103,17 @@ nav .navBar li{
 
 nav .navBar li a{
     
-    color: #FFFFFF;
+    color: #FAD000;
     font-size: 17px;
     padding: 7px 13px;
-    border-radius: 3px;
+    border-radius: 5px;
     text-transform: uppercase;
 }
 
 a:hover{
 
     text-decoration: none;
-    background-color: black;
+    background-color: rgb(169, 155, 155);
     transition: .5s;
 }
 
@@ -98,18 +125,37 @@ a:hover{
 }
 
 
-footer{
 
-    width: 100%;
+.fraseFechamento{
     display: flex;
-    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 13px;
+}
+
+footer{
+    border-top: 5px solid #000000;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    position: fixed;
+    width: 100%;
     background-color: #000000;
     color: #FFFFFF;
+    display:flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
+ 
+
+  }
+    
 
 }
 
 /* #2F2E2E
 #FAD000 */
+
+    
+    
+    
