@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login - ResiliaFlix</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p class="pLogo"><a href="home.html;" class="logo">ResiliaFlix</a></p>
+            <ul class="navBar">
+                <li><a href="./pesquisa.html">Pesquisa</a></li>
+                <li><a href="./cadastro.html">Perfil</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="d-flex flex-column align-items-center justify-content-center">
+        <div class="quadrado1 ">
+            <div class="boxInfo">
+                <h2>Bem-vindo!</h2>
+                <p>Faça login abaixo.</p>
+            </div>
+            <form class="form-group" action="">
+                <div>
+                    <label>Email</label>
+                    <input id="emailLogin" class="form-control" type="email" name="email"
+                        placeholder="exemplo@exemplo.com">
+
+                </div>
+                <br>
+                <div class="card1">
+                    <label>Senha</label>
+                    <input id="senhaLogin" class="form-control" type="password" name="senha">
+
+                </div>
+                <div class="cardLembre">
+                    <label><input type="checkbox"> Lembre-se de mim</label>
+
+                </div>
+                <div class="cardBotao btn">
+                    <button id="botaoLogin" type="button" class="btn btn-dark">Entrar</button>
+
+                </div>
+                <button id="loginEsqueci" type="button" class="btn btn-dark">Esqueci minha senha</button>
+            </form>
+        </div>
+    </main>
+    <footer class="d-flex justify-content-center mt-5">
+        Copyright &copy; Todos direitos reservados - Resilia T5 Grupo 01 - Modulo02
+    </footer>
+
+    <!-- scripts -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/loginESenha.js"></script>
+</body>
+
+</html>

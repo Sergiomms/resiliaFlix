@@ -5,89 +5,116 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <link rel="stylesheet" type="txt/css" href="./bootstrap/css/bootstrap.min.css">
+  <title>Cadastro  - ResiliaFlix</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/cadastro.css">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="./js/funcoesCadastro.js"></script>
+  <script src="./js/cadastro.js"></script>
+
 </head>
 
 <body>
   <header>
-    <p><a href="#home">Resiliaflix</a></p>
-    <nav>
+    <nav fixed-top>
+      <p class="pLogo"><a href="home.html" class="logo">ResiliaFlix</a></p>
       <ul class="navBar">
-        <li><a href="#pesquisa">Pesquisa</a></li>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="#logout">Logout</a></li>
+        <li><a href="pesquisa.html">Pesquisa</a></li>
+        <li><a href="cadastro.html">Perfil</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Logout</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <form>
-      <section class="formGroup">
-        <label for="nome">
-          Nome:
-          <input type="text" id="nome" value="Digite seu nome aqui!" required>
+      <div class="col1">
+        <section>
+          <label for="nome">
+            Nome:
+          </label>
+          <input class="tamanho" type="text" id="nome" placeholder="Digite seu nome aqui!" required>
+        </section>
+        <section>
+          <label for="senha">
+            Senha:
+          </label>
+          <input class="tamanho" type="password" name="senha" id="senha" required>
+        </section>
+        <section>
+          <label for="rg">
+            RG:
+          </label>
+          <input class="tamanho" type="text" name="rg" id="rg" placeholder="Digite seu rg aqui!" required>
+        </section>
+        <section>
+          <label for="estado">
+            Estado:
+          </label>
+          <input class="tamanho" type="text" name="estado" id="estado" placeholder="Digite seu estado aqui!" required>
+        </section>
+        <section>
+          <label for="bairro">
+            Bairro:
+          </label>
+          <input class="tamanho" type="text" name="bairro" id="bairro" placeholder="Digite seu bairro aqui!" required>
+        </section>
+        <section>
+          <label for="numero">
+            Numero:
+          </label>
+          <input class="tamanho" type="text" name="numero" id="numero" placeholder="Digite seu numero aqui!" required>
+        </section>
         </label>
-      </section>
-      <section class="formGroup">
-        <label for="email">
-          Email:
-          <input type="email" name="email" id="email" value="Digite seu email aqui!" required>
-        </label>
-      </section>
-      <section class="formGroup">
-        <label for="senha">
-          Senha:
-          <input type="password" name="senha" id="senha" required>
-        </label>
-        <label for="confirmacaoSenha">
-          Senha:
-          <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" required>
-        </label>
-      </section>
-      <section class="formGroup">
-        <label for="rg">
-          RG:
-          <input type="text" name="rg" id="rg" value="Digite seu rg aqui!" required>
-        </label>
-      </section>
-      <section class="formGroup">
-        <label for="cep">
-          CEP:
-          <input type="text" name="cep" id="cep" value="Digite seu cep aqui!" required>
-        </label>
-      </section>
-      <section class="formGroup">
-        <label for="estado">
-          Estado:
-          <input type="text" name="estado" id="estado" value="Digite seu estado aqui!" required>
-        </label>
-        <label for="cidade">
-          Cidade:
-          <input type="text" name="cidade" id="cidade" value="Digite sua cidade aqui!" required>
-        </label>
-        <label for="bairro">
-          Bairro:
-          <input type="text" name="bairro" id="bairro" value="Digite seu bairro aqui!" required>
-        </label>
-        <label for="rua">
-          Rua:
-          <input type="text" name="rua" id="rua" value="Digite sua rua aqui!" required>
-        </label>
-        <label for="numero">
-          Numero:
-          <input type="text" name="numero" id="numero" value="Digite seu numero aqui!" required>
-        </label>
-        <label for="complemento">
-          Complemento:
-          <input type="text" name="complemento" id="complemento" value="Digite o complemento aqui!" required>
-        </label>
-      </section>
+      </div>
 
+
+      <div class="col2">
+        <section>
+          <label for="email" class="espaco-campo">
+            Email:
+          </label>
+          <input class="tamanho" type="email" name="email" id="email" placeholder="Digite seu email aqui!" required>
+        </section>
+        <section>
+          <label for="confirmacaoSenha" class="espaco-campo">
+            Confirmção Senha:
+          </label>
+          <input class="tamanho" type="password" name="confirmacaoSenha" id="confirmacaoSenha" required>
+        </section>
+        <section>
+          <label for="cep" class="espaco-campo">
+            CEP:
+          </label>
+          <input class="tamanho" type="text" name="cep" id="cep" placeholder="Digite seu cep aqui!" required>
+        </section>
+        <section>
+          <label for="cidade" class="espaco-campo">
+            Cidade:
+          </label>
+          <input class="tamanho" type="text" name="cidade" id="cidade" placeholder="Digite sua cidade aqui!" required>
+        </section>
+        <section>
+          <label for="rua" class="espaco-campo">
+            Rua:
+          </label>
+          <input class="tamanho" type="text" name="rua" id="rua" placeholder="Digite sua rua aqui!" required>
+        </section>
+        <section>
+          <label for="complemento" class="espaco-campo">
+            Complemento:
+          </label>
+          <input class="tamanho" type="text" name="complemento" id="complemento" placeholder  ="Digite o complemento aqui!">
+        </section>
+      </div>
     </form>
+    <input type="submit" value="Enviar" id="enviar">
   </main>
-  <footer>
-    <span id="copy">Copyright &copy; Todos direitos reservados - Resilia T5 Grupo 01 - Modulo02</span>
+  <footer class="bottom d-flex justify-content-center p-2 bd-highlight">
+    <span id=" copy">Copyright &copy; Todos direitos reservados - Resilia T5 Grupo 01 - Modulo02</span>
   </footer>
 </body>
 

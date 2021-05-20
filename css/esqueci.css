@@ -1,70 +1,96 @@
 *{
+
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    
 }
-body{
-    background-color: #5a5a5a;
+
+body {
     font-family: sans-serif;
+    background-color: #5a5a5a;
+    min-height: 100vh;
+    color: #FFFFFF;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.pLogo{
+
+.pLogo {
     text-decoration: none;
     display: inline-block;
 }
-nav{
+
+nav {
     list-style: none;
     background-color: #2F2E2E;
     /* color: #FFFFFF; */
     height: 80px;
     width: 100%;
 }
-.logo{
+
+.logo {
     color: #FAD000;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bolder;
+    text-decoration: none;
 }
-.logo:hover{
+
+.logo:hover {
     color: #FAD000;
     cursor: pointer;
     background-color: #2F2E2E;
     text-decoration: none;
 }
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+
+nav .navBar {
+    float: right;
+    margin-right: 20px;
 }
-.titulo1{
-    font-size: 35px;
-    margin-top: 02%;
+
+nav .navBar li {
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 0 5px;
 }
-span{
-   color: #FAD000; 
+
+nav .navBar li a {
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-.textoDescrição{
-    width: 50%;
-    margin-top: 02%;
-    font-weight: bolder;
-    color: white;
+
+a:hover {
+    text-decoration: none;
+    background-color: black;
+    transition: .5s;
 }
-.containerCadastro{
+
+
+/* Main */
+
+.quadrado1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 60px;
     padding: 60px;
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.3);
     width: 50vw;
-    font-weight: bolder;
-    color: white;
+}
+
+.card{
+    background-color: transparent;
+    border: none;
 }
 .cardBotao>button {
     background-image: linear-gradient(to right, yellow, #FAD000);
@@ -74,30 +100,25 @@ span{
     color: #000000;
     font-weight: bold;
     border: 0px;
-    margin-top: 02%;
+    margin-top: 20px;
 }
+
 .btn button:hover {
     background-image: linear-gradient(to right, #FAD000, yellow);
-    cursor: pointer;
 }
-a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-}
-footer{
-    /* color: #FFFFFF; */
+
+
+footer span{
+
     width: 100%;
     display: flex;
-    height: 50px;
     background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    position: absolute;
-    bottom: 0;
-}
-.texto{
     color: #FFFFFF;
+    font-weight: bolder;
+    bottom: 0;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
 }
